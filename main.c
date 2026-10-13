@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "verktyg.h"
+#include <stdio.h>
 
 static void skriv_meny(void)
 {
@@ -10,6 +10,7 @@ static void skriv_meny(void)
     printf("4. Kontrollera om ett tal ar ett primtal\n");
     printf("5. FizzBuzz for ett intervall\n");
     printf("6. Enkel rakning (+, -, *, /)\n");
+    printf("9. Flera multiplikationstabeller\n");
     printf("0. Avsluta\n");
     printf("Val: ");
 }
@@ -25,77 +26,92 @@ int main(void)
 
         switch (val)
         {
-        case 1:
-        {
-            double celsius;
-            printf("Ange temperatur i Celsius: ");
-            scanf("%lf", &celsius);
-            printf("%.2f C = %.2f F\n",
-                   celsius, celsius_till_fahrenheit(celsius));
-            break;
-        }
-
-        case 2:
-        {
-            double bredd, hojd;
-            printf("Ange bredd och hojd: ");
-            scanf("%lf %lf", &bredd, &hojd);
-            printf("Arean ar %.2f\n", rektangelarea(bredd, hojd));
-            break;
-        }
-
-        case 3:
-        {
-            int tal;
-            printf("Ange ett tal: ");
-            scanf("%d", &tal);
-            skriv_multiplikationstabell(tal);
-            break;
-        }
-
-        case 4:
-        {
-            int tal;
-            printf("Ange ett heltal: ");
-            scanf("%d", &tal);
-
-            if (ar_primtal(tal))
+            case 1:
             {
-                printf("%d ar ett primtal.\n", tal);
+                double celsius;
+                printf("Ange temperatur i Celsius: ");
+                scanf("%lf", &celsius);
+                printf("%.2f C = %.2f F\n", celsius, celsius_till_fahrenheit(celsius));
+                break;
             }
-            else
+
+            case 2:
             {
-                printf("%d ar inte ett primtal.\n", tal);
+                double bredd, hojd;
+                printf("Ange bredd och hojd: ");
+                scanf("%lf %lf", &bredd, &hojd);
+                printf("Arean ar %.2f\n", rektangelarea(bredd, hojd));
+                break;
             }
-            break;
-        }
 
-        case 5:
-        {
-            int fran, till;
-            printf("Ange start och slut (t.ex. 1 20): ");
-            scanf("%d %d", &fran, &till);
-            skriv_fizzbuzz(fran, till);
-            break;
-        }
+            case 3:
+            {
+                int tal;
+                printf("Ange ett tal: ");
+                scanf("%d", &tal);
+                skriv_multiplikationstabell(tal);
+                break;
+            }
 
-        case 6:
-        {
-            double a, b;
-            char operatortecken;
-            printf("Ange uttryck, t.ex. \"4 + 2\": ");
-            scanf("%lf %c %lf", &a, &operatortecken, &b);
-            printf("Resultat: %.2f\n",
-                   berakna(a, b, operatortecken));
-            break;
-        }
+            case 4:
+            {
+                int tal;
+                printf("Ange ett heltal: ");
+                scanf("%d", &tal);
 
-        case 0:
-            printf("Avslutar.\n");
-            break;
+                if (ar_primtal(tal))
+                {
+                    printf("%d ar ett primtal.\n", tal);
+                }
+                else
+                {
+                    printf("%d ar inte ett primtal.\n", tal);
+                }
+                break;
+            }
 
-        default:
-            printf("Ogiltigt val, forsok igen.\n");
+            case 5:
+            {
+                int fran, till;
+                printf("Ange start och slut (t.ex. 1 20): ");
+                scanf("%d %d", &fran, &till);
+                skriv_fizzbuzz(fran, till);
+                break;
+            }
+
+            case 6:
+            {
+                double a, b;
+                char operatortecken;
+                printf("Ange uttryck, t.ex. \"4 + 2\": ");
+                scanf("%lf %c %lf", &a, &operatortecken, &b);
+                printf("Resultat: %.2f\n", berakna(a, b, operatortecken));
+                break;
+            }
+
+            case 9:
+            {
+                int tal[20];
+                int antal;
+
+                printf("Hur manga tabeller vill du skriva ut (max 20)? ");
+                scanf("%d", &antal);
+                for (int i = 0; i < antal; i++)
+                {
+                    printf("Tal % d : ", i + 1);
+                    scanf("%d", &tal[i]);
+                }
+
+                skriv_flera_tabeller(tal, antal);
+                break;
+            }
+
+            case 0:
+                printf("Avslutar.\n");
+                break;
+
+            default:
+                printf("Ogiltigt val, forsok igen.\n");
         }
     } while (val != 0);
 
