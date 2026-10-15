@@ -47,5 +47,12 @@ double berakna(double a, double b, char operatortecken)
     default:
         printf("Error: '%c' is not a valid math operator.\n", operatortecken);
     }
+
     return result;
+}
+
+void swap(double *a, double *b) {
+    double temp = *b;
+        *b = *a;
+        *a = temp;
 }
