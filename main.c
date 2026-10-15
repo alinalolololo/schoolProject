@@ -9,6 +9,7 @@ static void skriv_meny(void) {
   printf("4. Kontrollera om ett tal ar ett primtal\n");
   printf("5. FizzBuzz for ett intervall\n");
   printf("6. Enkel rakning (+, -, *, /)\n");
+  printf("12. Byt plats pa tva tal\n");
   printf("0. Avsluta\n");
   printf("Val: ");
 }
@@ -72,6 +73,21 @@ int main(void) {
       printf("Ange uttryck, t.ex. \"4 + 2\": ");
       scanf("%lf %c %lf", &a, &operatortecken, &b);
       printf("Resultat: %.2f\n", berakna(a, b, operatortecken));
+
+      // swap(&a, &b);
+      // printf("Changed values will be %lf %lf ", a, b);
+      // break;
+    }
+
+    case 12: {
+      double a, b;
+
+      printf("Ange tva tal, t.ex. \"3 7\": ");
+      scanf("%lf %lf", &a, &b);
+
+      printf("Fore : a = %.2f, b = %.2f\n", a, b);
+      swap(&a, &b);
+      printf("Efter : a = %.2f, b = %.2f\n", a, b);
       break;
     }
 

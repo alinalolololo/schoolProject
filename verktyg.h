@@ -3,8 +3,11 @@
 
 double celsius_till_fahrenheit(double celsius);
 double rektangelarea(double bredd, double hojd);
+void skriv_multiplikationstabell(int tal);
 int ar_primtal(int tal);
 void skriv_fizzbuzz(int fran, int till);
 double berakna(double a, double b, char operatortecken);
+
+void swap(double *a, double *b);
 
 #endif
