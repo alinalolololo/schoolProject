@@ -11,6 +11,7 @@ static void skriv_meny(void)
     printf("5. FizzBuzz for ett intervall\n");
     printf("6. Enkel rakning (+, -, *, /)\n");
     printf("7. Konvertera en serie av Celsius-varden till Fahrenheit\n");
+    printf("9. Flera multiplikationstabeller\n");
   printf("11. FizzBuzz sammanfattning");
   printf("12. Byt plats pa tva tal\n");
   printf("0. Avsluta\n");
