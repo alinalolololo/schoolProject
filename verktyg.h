@@ -10,4 +10,8 @@ double berakna(double a, double b, char operatortecken);
 
 void konvertera_serie(double *matningar, int antal);
 
+void skriv_flera_tabeller(int tal[], int antal);
+void swap(double *a, double *b);
+void fizzbuzz_sammanfattning(int fran, int till, char sammanfattning[]);
+
 #endif
