@@ -10,6 +10,7 @@ static void skriv_meny(void) {
   printf("5. FizzBuzz for ett intervall\n");
   printf("6. Enkel rakning (+, -, *, /)\n");
   printf("9. Skriv flera tabeller\n");
+  printf("11. FizzBuzz sammanfattning");
   printf("12. Byt plats pa tva tal\n");
   printf("0. Avsluta\n");
   printf("Val: ");
@@ -95,7 +96,17 @@ int main(void) {
         skriv_flera_tabeller(tal, antal);
         break;
     }
+    case 11: {
+      int fran, till;
+      char sammanfattning[100];
 
+      printf("Ange start och slut (t.ex. 1 20): ");
+      scanf("%d %d", &fran, &till);
+
+      fizzbuzz_sammanfattning(fran, till, sammanfattning);
+      printf("%s\n", sammanfattning);
+      break;
+    }
     case 12: {
       double a, b;
 

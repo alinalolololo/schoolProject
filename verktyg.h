@@ -11,4 +11,7 @@ double berakna(double a, double b, char operatortecken);
 void skriv_flera_tabeller(int tal[], int antal);
 void swap(double *a, double *b);
 
+
+
+void fizzbuzz_sammanfattning(int fran, int till, char sammanfattning[]);
 #endif
