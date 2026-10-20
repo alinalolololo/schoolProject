@@ -10,6 +10,7 @@ static void skriv_meny(void)
     printf("4. Kontrollera om ett tal ar ett primtal\n");
     printf("5. FizzBuzz for ett intervall\n");
     printf("6. Enkel rakning (+, -, *, /)\n");
+    printf("7. Konvertera en serie av Celsius-varden till Fahrenheit\n");
     printf("0. Avsluta\n");
     printf("Val: ");
 }
@@ -88,6 +89,27 @@ int main(void)
             printf("Resultat: %.2f\n",
                    berakna(a, b, operatortecken));
             break;
+        }
+
+        case 7: {
+            double matningar[20];
+            int antal;
+            printf("Hur manga matningar vill du mata in (max 20)? ");
+            scanf("%d", &antal);
+            for (int i = 0; i < antal; i++) {
+            printf("Matning %d (Celsius): ", i + 1);
+            scanf("%lf", &matningar[i]);
+         }
+
+        konvertera_serie(matningar, antal);
+
+
+        printf("I Fahrenheit: ");
+            for (int i = 0; i < antal; i++) {
+                printf("%.2f ", matningar[i]);
+            }
+        printf("\n");
+        break;
         }
 
         case 0:
