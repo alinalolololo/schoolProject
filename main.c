@@ -12,6 +12,7 @@ static void skriv_meny(void)
     printf("6. Enkel rakning (+, -, *, /)\n");
     printf("7. Konvertera en serie av Celsius-varden till Fahrenheit\n");
     printf("9. Flera multiplikationstabeller\n");
+    printf("10. Rakna primtal i en lista\n");
     printf("11. FizzBuzz sammanfattning");
     printf("12. Byt plats pa tva tal\n");
     printf("0. Avsluta\n");
@@ -98,6 +99,25 @@ int main(void) {
         skriv_flera_tabeller(tal, antal);
         break;
     }
+    case 10: 
+    {
+    int tal[20];
+    int antal;
+
+    printf("Hur manga tal vill du kontrollera (max 20)? ");
+    scanf("%d", &antal);
+    for (int i = 0; i < antal; i++) 
+    {
+    printf("Tal %d: ", i + 1);
+    scanf("%d", &tal[i]);
+    }
+
+    printf("Antal primtal: %d\n", raknar_primtal_i_array(tal, antal));
+    break;
+    }
+
+
+
     case 11: {
       int fran, till;
       char sammanfattning[100];
