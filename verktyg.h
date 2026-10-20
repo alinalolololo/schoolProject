@@ -8,6 +8,7 @@ int ar_primtal(int tal);
 void skriv_fizzbuzz(int fran, int till);
 double berakna(double a, double b, char operatortecken);
 
+void skriv_flera_tabeller(int tal[], int antal);
 void swap(double *a, double *b);
 
 #endif

@@ -9,6 +9,7 @@ static void skriv_meny(void) {
   printf("4. Kontrollera om ett tal ar ett primtal\n");
   printf("5. FizzBuzz for ett intervall\n");
   printf("6. Enkel rakning (+, -, *, /)\n");
+  printf("9. Skriv flera tabeller\n");
   printf("12. Byt plats pa tva tal\n");
   printf("0. Avsluta\n");
   printf("Val: ");
@@ -77,6 +78,22 @@ int main(void) {
       // swap(&a, &b);
       // printf("Changed values will be %lf %lf ", a, b);
       // break;
+    }
+
+    case 9: {
+        int tal[20];
+        int antal;
+
+        printf("Hur manga tabeller vill du skriva ut (max 20)? ");
+        scanf("%d", &antal);
+
+        for (int i = 0; i < antal; i++) {
+            printf("Tal %d: ", i + 1);
+            scanf("%d", &tal[i]);
+        }
+
+        skriv_flera_tabeller(tal, antal);
+        break;
     }
 
     case 12: {
