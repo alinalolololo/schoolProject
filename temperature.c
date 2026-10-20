@@ -27,5 +27,5 @@ void konvertera_serie(double *matningar, int antal) {
         //Utskriften syns här
         //printf("%.1f Celsius\t\t%.1F Fahrenheit\n", matningar[i], fahrenheit);
     }
-    return 0;
+    return;
 }
