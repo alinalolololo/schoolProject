@@ -12,10 +12,10 @@ static void skriv_meny(void)
     printf("6. Enkel rakning (+, -, *, /)\n");
     printf("7. Konvertera en serie av Celsius-varden till Fahrenheit\n");
     printf("9. Flera multiplikationstabeller\n");
-  printf("11. FizzBuzz sammanfattning");
-  printf("12. Byt plats pa tva tal\n");
-  printf("0. Avsluta\n");
-  printf("Val: ");
+    printf("11. FizzBuzz sammanfattning");
+    printf("12. Byt plats pa tva tal\n");
+    printf("0. Avsluta\n");
+    printf("Val: ");
 }
 
 int main(void) {
@@ -121,31 +121,32 @@ int main(void) {
       break;
     }
     case 7: {
-              double matningar[20];
-              int antal;
-              printf("Hur manga matningar vill du mata in (max 20)? ");
-              scanf("%d", &antal);
-              for (int i = 0; i < antal; i++) {
-              printf("Matning %d (Celsius): ", i + 1);
-              scanf("%lf", &matningar[i]);
+      double matningar[20];
+      int antal;
+      printf("Hur manga matningar vill du mata in (max 20)? ");
+      scanf("%d", &antal);
+        for (int i = 0; i < antal; i++) {
+          printf("Matning %d (Celsius): ", i + 1);
+          scanf("%lf", &matningar[i]);
+        }
+
+      konvertera_serie(matningar, antal);
+
+
+      printf("I Fahrenheit: ");
+        for (int i = 0; i < antal; i++) {
+            printf("%.2f ", matningar[i]);
           }
+      printf("\n");
+      break;
+      }
 
-          konvertera_serie(matningar, antal);
-
-
-          printf("I Fahrenheit: ");
-              for (int i = 0; i < antal; i++) {
-                  printf("%.2f ", matningar[i]);
-              }
-          printf("\n");
-          break;
-          }
-
-            case 0:{
+    case 0:{
               
-              printf("Avslutar.\n");
-              break;
-            }
+      printf("Avslutar.\n");
+      break;
+    }
+    
     default:{
       printf("Ogiltigt val, forsok igen.\n");
     }
