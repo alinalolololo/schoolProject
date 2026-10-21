@@ -15,6 +15,7 @@ static void skriv_meny(void)
     printf("10. Rakna primtal i en lista\n");
     printf("11. FizzBuzz sammanfattning");
     printf("12. Byt plats pa tva tal\n");
+    printf("17. Kopiera matloggen\n");
     printf("0. Avsluta\n");
     printf("Val: ");
 }
@@ -138,6 +139,15 @@ int main(void) {
       printf("Fore : a = %.2f, b = %.2f\n", a, b);
       swap(&a, &b);
       printf("Efter : a = %.2f, b = %.2f\n", a, b);
+      break;
+    }
+    case 17: {
+      int kopia_antal = matlogg_antal;
+      double *kopia = kopiera_matlogg(matlogg, matlogg_antal);
+      printf("Kopierade %d matning(ar) till en ny logg:\n", kopia_antal);
+      skriv_matlogg(kopia, kopia_antal);
+      frigor_matlogg(kopia);
+      printf("(Kopian ar nu frigjord igen -- den var bara for testet.)\n");
       break;
     }
     case 7: {
