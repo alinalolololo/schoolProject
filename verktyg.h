@@ -15,4 +15,6 @@ void swap(double *a, double *b);
 void fizzbuzz_sammanfattning(int fran, int till, char sammanfattning[]);
 
 double *kopiera_matlogg(double *logg, int antal);
+double *ta_bort_senaste_matning(double *logg, int *antal);
+
 #endif
