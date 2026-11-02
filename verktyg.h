@@ -14,7 +14,9 @@ void skriv_flera_tabeller(int tal[], int antal);
 void swap(double *a, double *b);
 void fizzbuzz_sammanfattning(int fran, int till, char sammanfattning[]);
 
-double *kopiera_matlogg(double *logg, int antal);
 
+
+double *kopiera_matlogg(double *logg, int antal);
+double *ta_bort_senaste_matning(double *logg, int *antal);
 void frigor_matlogg(double *logg);
 #endif
