@@ -1,14 +1,18 @@
-temperatur.c - Nafisa  lagg_till_matning
+Nafisa - temperatur.c / 
+lagg_till_matning
 ---
-geometri.c - Valentin  ta_bort_senaste_matning 
+Valentin - geometri.c /
+ta_bort_senaste_matning 
 ---
-multiplikation.c - Anton  skriv_matlogg
+Anton - multiplikation.c + primtal.c/
+skriv_matlogg + berakna_loggstatistik
 ---
-primtal.c - Rickard berakna_loggstatistik
+Oskar - fizzbuzz.c /
+kopiera_matlogg
 ---
-fizzbuzz.c - Oskar  kopiera_matlogg
+Alina - kalkylator.c /
+frigor_matlogg
 ---
-kalkylator.c - Alina  frigor_matlogg
 
 
 /* git add verktyg.h

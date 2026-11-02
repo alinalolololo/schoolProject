@@ -16,12 +16,15 @@ static void skriv_meny(void)
     printf("11. FizzBuzz sammanfattning");
     printf("12. Byt plats pa tva tal\n");
     printf("17. Kopiera matloggen\n");
+    printf("18. Frigor matloggen\n");
     printf("0. Avsluta\n");
     printf("Val: ");
 }
 
 int main(void) {
   int val;
+  double *matlogg = NULL;
+  int matlogg_antal = 0;
 
   do {
     skriv_meny();
@@ -170,9 +173,20 @@ int main(void) {
       printf("\n");
       break;
       }
-
+      
+      case 18:{
+        frigor_matlogg(matlogg);
+        matlogg = NULL;
+        matlogg_antal = 0;
+        printf("Matloggen ar frigjord.\n");
+        break;
+      }
     case 0:{
-              
+      if (matlogg != NULL) {
+        frigor_matlogg(matlogg);
+        matlogg = NULL;
+        matlogg_antal = 0;
+      }
       printf("Avslutar.\n");
       break;
     }
