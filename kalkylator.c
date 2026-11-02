@@ -1,5 +1,6 @@
 #include "verktyg.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 
 /* printf("Sum: %.2f\n", first + second);
@@ -51,4 +52,8 @@ void swap(double *a, double *b) {
   double temp = *b;
   *b = *a;
   *a = temp;
+}
+
+void frigor_matlogg(double *logg){
+  return free(logg) ;
 }
