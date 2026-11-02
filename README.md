@@ -8,7 +8,9 @@ primtal.c - Rickard berakna_loggstatistik
 ---
 fizzbuzz.c - Oskar  kopiera_matlogg
 ---
-kalkylator.c - Alina  frigor_matlogg
+Alina - kalkylator.c
+frigor_matlogg
+---
 
 
 /* git add verktyg.h
