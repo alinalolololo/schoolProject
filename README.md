@@ -6,7 +6,7 @@
 | Valentin | meny 14 + `geometri.c`                    | ⬜    |
 | Anton    | `matlogg_skriv.c` + `matlogg_statistik.c` | ✅    |
 | Oskar    | `matlogg_kopiera.c`                       | ✅    |
-| Alina    | `matlogg_frigor.c` (meny 18)              | ⬜    |
+| Alina    | `matlogg_frigor.c` (meny 18)              | ✅    |
 
 ## Uppdrag
 
