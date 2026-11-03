@@ -15,6 +15,7 @@ static void skriv_meny(void)
     printf("10. Rakna primtal i en lista\n");
     printf("11. FizzBuzz sammanfattning");
     printf("12. Byt plats pa tva tal\n");
+    printf("13. Lagg till en matning i matloggen\n");
     printf("15. Skriv ut matloggen");
     printf("16. Statistik for matloggen (min/max/medel)");
     printf("17. Kopiera matloggen\n");
@@ -144,6 +145,14 @@ int main(void) {
       printf("Fore : a = %.2f, b = %.2f\n", a, b);
       swap(&a, &b);
       printf("Efter : a = %.2f, b = %.2f\n", a, b);
+      break;
+    }
+    case 13: {
+      double varde;
+      printf("Ange matvarde att lagga till: ");
+      scanf("%lf", &varde);
+      matlogg = lagg_till_matning(matlogg, &matlogg_antal, varde);
+      printf("Matloggen innehaller nu %d matning(ar).\n", matlogg_antal);
       break;
     }
 
