@@ -15,6 +15,8 @@ static void skriv_meny(void)
     printf("10. Rakna primtal i en lista\n");
     printf("11. FizzBuzz sammanfattning");
     printf("12. Byt plats pa tva tal\n");
+    printf("15. Skriv ut matloggen");
+    printf("16. Statistik for matloggen (min/max/medel)");
     printf("17. Kopiera matloggen\n");
     printf("18. Frigor matloggen\n");
     printf("0. Avsluta\n");
@@ -144,6 +146,21 @@ int main(void) {
       printf("Efter : a = %.2f, b = %.2f\n", a, b);
       break;
     }
+
+    case 15:
+    {
+        skriv_matlogg(matlogg, matlogg_antal);
+        break;
+    }
+
+    case 16:
+    {
+        double min, max, medel;
+        berakna_loggstatistik(matlogg, matlogg_antal, &min, &max, &medel);
+        printf("Min: %.2f, Max: %.2f, Medel: %.2f\n", min, max, medel);
+        break;
+    }
+
     case 17: {
       int kopia_antal = matlogg_antal;
       double *kopia = kopiera_matlogg(matlogg, matlogg_antal);
