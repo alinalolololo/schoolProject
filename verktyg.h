@@ -19,4 +19,8 @@ void fizzbuzz_sammanfattning(int fran, int till, char sammanfattning[]);
 double *kopiera_matlogg(double *logg, int antal);
 double *ta_bort_senaste_matning(double *logg, int *antal);
 void frigor_matlogg(double *logg);
+void skriv_matlogg(double *log, int antal);
+void berakna_loggstatistik(double *logg, int antal, double *min_ut, 
+    double *max_ut, double *medel_ut);
+
 #endif
