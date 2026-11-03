@@ -1,17 +1,22 @@
 Nafisa - temperatur.c / 
-lagg_till_matning
+lagg_till_matning / 
+sensor_lagg_till.c
 ---
 Valentin - geometri.c /
-ta_bort_senaste_matning 
+ta_bort_senaste_matning /
+sensor_skriv.c
 ---
 Anton - multiplikation.c + primtal.c/
-skriv_matlogg + berakna_loggstatistik
+skriv_matlogg + berakna_loggstatistik/ 
+sensor_medelvarde.c + sensor_hitta.c
 ---
 Oskar - fizzbuzz.c /
-kopiera_matlogg
+kopiera_matlogg /
+sensor_spara.c 
 ---
 Alina - kalkylator.c /
-frigor_matlogg
+frigor_matlogg /
+sensor_lasa.c 
 ---
 
 
