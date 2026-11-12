@@ -15,6 +15,8 @@ static void skriv_meny(void)
     printf("10. Rakna primtal i en lista\n");
     printf("11. FizzBuzz sammanfattning");
     printf("12. Byt plats pa tva tal\n");
+    printf("13. Lagg till en matning i matloggen\n");
+    printf("14. Ta bort senaste matningen\n");
     printf("15. Skriv ut matloggen");
     printf("16. Statistik for matloggen (min/max/medel)");
     printf("17. Kopiera matloggen\n");
@@ -23,16 +25,16 @@ static void skriv_meny(void)
     printf("Val: ");
 }
 
-int main(void) 
+int main(void) {
   int val;
   double *matlogg = NULL;
   int matlogg_antal = 0;
 
-  do 
+  do {
     skriv_meny();
     scanf("%d", &val);
 
-    switch (val) 
+    switch (val) {
     case 1: {
       double celsius;
       printf("Ange temperatur i Celsius: ");
@@ -147,10 +149,19 @@ int main(void)
       break;
     }
      case 14: {
-          matlogg = ta_bort_senaste_matning(matlogg, &matlogg_antal);
-          printf(”Matloggen innehaller nu %d matning(ar).\n”, matlogg_antal);
+        matlogg = ta_bort_senaste_matning(matlogg, &matlogg_antal);
+          printf("Matloggen innehaller nu %d matning(ar).\n", matlogg_antal);
           break;
         }
+    case 13: {
+      double varde;
+      printf("Ange matvarde att lagga till: ");
+      scanf("%lf", &varde);
+      matlogg = lagg_till_matning(matlogg, &matlogg_antal, varde);
+        printf("Matloggen innehaller nu %d matning(ar).\n", matlogg_antal);
+        break;
+    }
+
     case 15:
     {
         skriv_matlogg(matlogg, matlogg_antal);
@@ -215,6 +226,7 @@ int main(void)
     default:{
       printf("Ogiltigt val, forsok igen.\n");
     }
-  
- while (val != 0);
+  }
+} while (val != 0);
   return 0;
+}
