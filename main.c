@@ -23,16 +23,16 @@ static void skriv_meny(void)
     printf("Val: ");
 }
 
-int main(void) {
+int main(void) 
   int val;
   double *matlogg = NULL;
   int matlogg_antal = 0;
 
-  do {
+  do 
     skriv_meny();
     scanf("%d", &val);
 
-    switch (val) {
+    switch (val) 
     case 1: {
       double celsius;
       printf("Ange temperatur i Celsius: ");
@@ -146,7 +146,11 @@ int main(void) {
       printf("Efter : a = %.2f, b = %.2f\n", a, b);
       break;
     }
-
+     case 14: {
+          matlogg = ta_bort_senaste_matning(matlogg, &matlogg_antal);
+          printf(”Matloggen innehaller nu %d matning(ar).\n”, matlogg_antal);
+          break;
+        }
     case 15:
     {
         skriv_matlogg(matlogg, matlogg_antal);
@@ -211,7 +215,6 @@ int main(void) {
     default:{
       printf("Ogiltigt val, forsok igen.\n");
     }
-  }
-} while (val != 0);
+  
+ while (val != 0);
   return 0;
-}
