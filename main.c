@@ -23,8 +23,8 @@ static void skriv_meny(void)
     //Uppdrag 3
     printf("13. Lagg till en matning i matloggen\n");
     printf("14. Ta bort senaste matningen\n");
-    printf("15. Skriv ut matloggen");
-    printf("16. Statistik for matloggen (min/max/medel)");
+    printf("15. Skriv ut matloggen\n");
+    printf("16. Statistik for matloggen (min/max/medel)\n");
     printf("17. Kopiera matloggen\n");
     printf("18. Frigor matloggen\n");
 
@@ -164,6 +164,7 @@ int main(void) {
           printf("Matloggen innehaller nu %d matning(ar).\n", matlogg_antal);
           break;
         }
+        
     case 13: {
       double varde;
       printf("Ange matvarde att lagga till: ");

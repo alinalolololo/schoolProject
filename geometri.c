@@ -1,3 +1,10 @@
+#include "verktyg.h"
+
+double rektangelarea(double bredd, double hojd)
+{
+    return bredd * hojd;
+}
+
 void storst_rektangel(
     double bredder[],
     double hojder[],
