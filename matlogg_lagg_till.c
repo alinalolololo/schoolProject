@@ -19,7 +19,6 @@ double *lagg_till_matning(double *logg, int *antal, double varde) {
     }
 
     ny_logg[*antal] = varde;
-    *antal++;
+    (*antal)++;
     return ny_logg;
-
 }

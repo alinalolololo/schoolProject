@@ -41,7 +41,6 @@
 gcc -Wall -Wextra -Wpedantic -std=c17 \
     main.c temperature.c geometri.c multiplikation.c primtal.c \
     fizzbuzz.c kalkylator.c matlogg_skriv.c matlogg_statistik.c \
-    matlogg_kopiera.c matlogg_ta_bort.c \
+    matlogg_kopiera.c matlogg_ta_bort.c matlogg_lagg_till.c \
     -o verktygslada
-./verktygslada
 ```
