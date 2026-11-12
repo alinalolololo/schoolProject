@@ -30,5 +30,7 @@ void berakna_loggstatistik(double *logg, int antal, double *min_ut,
     double *max_ut, double *medel_ut);
 
 void spara_sensorregister(const char *filnamn,const Sensormatning sensorregister[],int antal);
+void skriv_sensorregister(Sensormatning *reg, int antal);
+Sensormatning *lasa_sensorregister(const char *filnamn, int *antal_ut);
 
 #endif
