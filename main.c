@@ -27,6 +27,7 @@ static void skriv_meny(void)
     printf("16. Statistik for matloggen (min/max/medel)");
     printf("17. Kopiera matloggen\n");
     printf("18. Frigor matloggen\n");
+    printf("23. Spara sensorregistret till fil\n");
 
     //Uppdrag 4
 
@@ -223,6 +224,15 @@ int main(void) {
         matlogg_antal = 0;
         printf("Matloggen ar frigjord.\n");
         break;
+      }
+
+      case 23: {
+      char filnamn[100];
+      printf("Filnamn att spara till: ");
+      scanf("%99s", filnamn);
+      spara_sensorregister(filnamn, sensorregister, sensorregister_antal);
+      printf("Sensorregistret sparat till %s.\n", filnamn);
+      break;
       }
     case 0:{
       if (matlogg != NULL) {
