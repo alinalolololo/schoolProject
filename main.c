@@ -4,23 +4,31 @@
 static void skriv_meny(void)
 {
     printf("\n=== Gruppens verktygslada ===\n");
+    //Uppdrag 1
     printf("1. Temperaturkonvertering (Celsius -> Fahrenheit)\n");
     printf("2. Rektangelns area\n");
     printf("3. Multiplikationstabell\n");
     printf("4. Kontrollera om ett tal ar ett primtal\n");
     printf("5. FizzBuzz for ett intervall\n");
     printf("6. Enkel rakning (+, -, *, /)\n");
+    
+    //Uppdrag 2
     printf("7. Konvertera en serie av Celsius-varden till Fahrenheit\n");
     printf("9. Flera multiplikationstabeller\n");
     printf("10. Rakna primtal i en lista\n");
     printf("11. FizzBuzz sammanfattning");
     printf("12. Byt plats pa tva tal\n");
+
+    //Uppdrag 3
     printf("13. Lagg till en matning i matloggen\n");
     printf("14. Ta bort senaste matningen\n");
     printf("15. Skriv ut matloggen");
     printf("16. Statistik for matloggen (min/max/medel)");
     printf("17. Kopiera matloggen\n");
     printf("18. Frigor matloggen\n");
+
+    //Uppdrag 4
+
     printf("0. Avsluta\n");
     printf("Val: ");
 }
