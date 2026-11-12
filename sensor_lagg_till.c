@@ -1,5 +1,7 @@
 #include <string.h>
 #include "verktyg.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 Sensormatning *lagg_till_sensormatning(Sensormatning *reg, int *antal, 
     const char *namn, double varde) {
