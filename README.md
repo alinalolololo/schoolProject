@@ -15,11 +15,18 @@
 | Oskar    | `sensor_spara.c`                          | ⬜    |
 | Alina    | `sensor_lasa.c`  +`sensor_skriv.c`        | ⬜    |
 
+| Medlem   | Uppgift 5                                 | Klar? |
+|----------|-------------------------------------------|-------|
+| Nafisa   |                      | ⬜    |
+| Anton    |   | ⬜    |
+| Oskar    |                           | ⬜    |
+| Alina    |         | ⬜    |
+
 ## Uppdrag
 
 - [x] 1
 - [x] 2
-- [ ] 3
+- [x] 3
 - [ ] 4
 - [ ] 5
 - [ ] 6

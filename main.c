@@ -1,5 +1,6 @@
 #include "verktyg.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 static void skriv_meny(void)
 {
@@ -37,6 +38,8 @@ int main(void) {
   int val;
   double *matlogg = NULL;
   int matlogg_antal = 0;
+  Sensormatning *sensorregister = NULL;
+  int sensorregister_antal = 0;
 
   do {
     skriv_meny();
@@ -227,6 +230,10 @@ int main(void) {
         matlogg = NULL;
         matlogg_antal = 0;
       }
+      free(sensorregister);
+      sensorregister = NULL;
+      sensorregister_antal = 0;
+      
       printf("Avslutar.\n");
       break;
     }
