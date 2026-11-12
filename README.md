@@ -1,5 +1,13 @@
 # Verktygslådan
 
+| Medlem   | Uppgift 3                                 | Klar? |
+|----------|-------------------------------------------|-------|
+| Nafisa   | `matlogg_lagg_till.c` (meny 13)           | ⬜    |
+| Valentin | meny 14 + `geometri.c`                    | ✅    |
+| Anton    | `matlogg_skriv.c` + `matlogg_statistik.c` | ✅    |
+| Oskar    | `matlogg_kopiera.c`                       | ✅    |
+| Alina    | `matlogg_frigor.c`                        | ✅    |
+
 | Medlem   | Uppgift 4                                 | Klar? |
 |----------|-------------------------------------------|-------|
 | Nafisa   | `sensor_lagg_till.c`                      | ⬜    |

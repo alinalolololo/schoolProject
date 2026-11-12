@@ -12,7 +12,7 @@ static void skriv_meny(void)
     printf("4. Kontrollera om ett tal ar ett primtal\n");
     printf("5. FizzBuzz for ett intervall\n");
     printf("6. Enkel rakning (+, -, *, /)\n");
-
+    
     //Uppdrag 2
     printf("7. Konvertera en serie av Celsius-varden till Fahrenheit\n");
     printf("9. Flera multiplikationstabeller\n");
@@ -38,6 +38,8 @@ int main(void) {
   int val;
   double *matlogg = NULL;
   int matlogg_antal = 0;
+  Sensormatning *sensorregister = NULL;
+  int sensorregister_antal = 0;
 
   do {
     skriv_meny();
@@ -231,6 +233,7 @@ int main(void) {
       free(sensorregister);
       sensorregister = NULL;
       sensorregister_antal = 0;
+      
       printf("Avslutar.\n");
       break;
     }
