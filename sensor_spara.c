@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include "verktyg.h"
-#include<stdlib.h>
 
 void spara_sensorregister(const char *filnamn,const Sensormatning sensorregister[],int antal)
 {
