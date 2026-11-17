@@ -42,4 +42,7 @@ gcc -Wall -Wextra -Wpedantic -std=c17 \
     fizzbuzz.c kalkylator.c matlogg_skriv.c matlogg_statistik.c \
     matlogg_kopiera.c matlogg_ta_bort.c matlogg_lagg_till.c \
     -o verktygslada
+
+    gcc -Wall -Wextra -Wpedantic -std=c17 \ main.c temperature.c geometri.c \ multiplikation.c primtal.c fizzbuzz.c kalkylator.c \ matlogg_lagg_till.c matlogg_ta_bort.c matlogg_skriv.c \ matlogg_statistik.c matlogg_kopiera.c matlogg_frigor.c \ sensor_lagg_till.c sensor_skriv.c sensor_medelvarde.c \ sensor_hitta.c sensor_spara.c sensor_lasa.c \ -o verktygslada
+./verktygslada
 ```
