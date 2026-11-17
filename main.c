@@ -15,6 +15,7 @@ static void skriv_meny(void)
     
     //Uppdrag 2
     printf("7. Konvertera en serie av Celsius-varden till Fahrenheit\n");
+    printf("8. Storst rektangel i en lista\n");
     printf("9. Flera multiplikationstabeller\n");
     printf("10. Rakna primtal i en lista\n");
     printf("11. FizzBuzz sammanfattning");
@@ -108,6 +109,45 @@ int main(void) {
       // printf("Changed values will be %lf %lf ", a, b);
       // break;
     }
+      case 7: {
+      double matningar[20];
+      int antal;
+      printf("Hur manga matningar vill du mata in (max 20)? ");
+      scanf("%d", &antal);
+        for (int i = 0; i < antal; i++) {
+          printf("Matning %d (Celsius): ", i + 1);
+          scanf("%lf", &matningar[i]);
+        }
+
+      konvertera_serie(matningar, antal);
+
+
+      printf("I Fahrenheit: ");
+        for (int i = 0; i < antal; i++) {
+            printf("%.2f ", matningar[i]);
+          }
+      printf("\n");
+      break;
+      }
+      
+    case 8: {
+      double bredder[20], hojder[20];
+      int antal;
+      double storsta_area;
+      int index;
+      printf("Hur manga rektanglar vill du jamfora (max 20)? ");
+      scanf("%d", &antal);
+      for (int i = 0; i < antal; i++) {
+       printf("Rektangel %d, bredd och hojd: ", i + 1);
+       scanf("%lf %lf", &bredder[i], &hojder[i]);
+       }
+      
+       storst_rektangel(bredder, hojder, antal, &storsta_area, &index);
+      
+       printf("Storst area ar %.2f, rektangel nummer %d\n",
+       storsta_area, index + 1);
+       break;
+       }
 
     case 9: {
         int tal[20];
@@ -203,26 +243,6 @@ int main(void) {
       printf("(Kopian ar nu frigjord igen -- den var bara for testet.)\n");
       break;
     }
-    case 7: {
-      double matningar[20];
-      int antal;
-      printf("Hur manga matningar vill du mata in (max 20)? ");
-      scanf("%d", &antal);
-        for (int i = 0; i < antal; i++) {
-          printf("Matning %d (Celsius): ", i + 1);
-          scanf("%lf", &matningar[i]);
-        }
-
-      konvertera_serie(matningar, antal);
-
-
-      printf("I Fahrenheit: ");
-        for (int i = 0; i < antal; i++) {
-            printf("%.2f ", matningar[i]);
-          }
-      printf("\n");
-      break;
-      }
       
       case 18:{
         frigor_matlogg(matlogg);

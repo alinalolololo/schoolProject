@@ -15,6 +15,9 @@ double berakna(double a, double b, char operatortecken);
 int raknar_primtal_i_array(int tal[], int antal);
 void konvertera_serie(double *matningar, int antal);
 
+void storst_rektangel(double bredder[], double hojder[], int antal,
+                     double *storsta_area_ut, int *index_ut);
+
 void skriv_flera_tabeller(int tal[], int antal);
 void swap(double *a, double *b);
 void fizzbuzz_sammanfattning(int fran, int till, char sammanfattning[]);
