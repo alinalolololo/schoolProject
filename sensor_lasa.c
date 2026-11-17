@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "verktyg.h"
-#include <stdlib.h>
 
 Sensormatning *lasa_sensorregister(const char *filnamn, int *antal_ut){
 
