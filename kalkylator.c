@@ -53,7 +53,3 @@ void swap(double *a, double *b) {
   *b = *a;
   *a = temp;
 }
-
-void frigor_matlogg(double *logg){
-  return free(logg) ;
-}

@@ -18,10 +18,14 @@ Sensormatning *lasa_sensorregister(const char *filnamn, int *antal_ut){
  while (fscanf(fil, "%49s %lf", namn, &varde) == 2) {
 
  int tidigare_antal = antal;
-        reg = lagg_till_sensormatning(reg, &antal, namn, varde);
-        if (antal == tidigare_antal) {
+
+ reg = lagg_till_sensormatning(reg, &antal, namn, varde);
+
+ if (antal == tidigare_antal) {
             break;
-        }
+}
+
+printf("%49s %lf\n", reg->namn, reg->varde);
  }
 
  fclose(fil);

@@ -290,6 +290,7 @@ int main(void) {
         sensorregister = lasa_sensorregister(filnamn, &sensorregister_antal);
         printf("Laste in %d post(er) fran %s.\n",
         sensorregister_antal, filnamn);
+        printf("%49s %lf", sensorregister->namn, sensorregister->varde);
         break; 
       }
     case 0:{

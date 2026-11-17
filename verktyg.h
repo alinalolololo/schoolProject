@@ -29,13 +29,12 @@ void skriv_matlogg(double *log, int antal);
 void berakna_loggstatistik(double *logg, int antal, double *min_ut, 
     double *max_ut, double *medel_ut);
 
+// Uppdrag 4
+double medelvarde_sensorregister(Sensormatning *reg, int antal);
+int hitta_sensor(Sensormatning *reg, int antal, const char *namn);
 void spara_sensorregister(const char *filnamn,const Sensormatning sensorregister[],int antal);
 Sensormatning *lagg_till_sensormatning(Sensormatning *reg, int *antal, const char *namn, double varde);
 void skriv_sensorregister(Sensormatning *reg, int antal);
 Sensormatning *lasa_sensorregister(const char *filnamn, int *antal_ut);
-
-// Uppdrag 4
-double medelvarde_sensorregister(Sensormatning *reg, int antal);
-int hitta_sensor(Sensormatning *reg, int antal, const char *namn);
 
 #endif
