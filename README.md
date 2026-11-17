@@ -3,9 +3,9 @@
 | Medlem   | Uppgift 4                                 | Klar? |
 |----------|-------------------------------------------|-------|
 | Nafisa   | `sensor_lagg_till.c`                      | ✅    |
-| Anton    | `sensor_medelvarde.c` + `sensor_hitta.c`  | ⬜    |
+| Anton    | `sensor_medelvarde.c` + `sensor_hitta.c`  | ✅    |
 | Oskar    | `sensor_spara.c`                          | ✅    |
-| Alina    | `sensor_lasa.c`  +`sensor_skriv.c`        | ⬜    |
+| Alina    | `sensor_lasa.c`  +`sensor_skriv.c`        | ✅    |
 
 | Medlem   | Uppgift 5                                 | Klar? |
 |----------|-------------------------------------------|-------|
