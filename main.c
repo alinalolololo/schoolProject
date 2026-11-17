@@ -30,6 +30,8 @@ static void skriv_meny(void)
 
     //Uppdrag 4
     printf("20. Skriv ut sensorregistret\n");
+    printf("21. Medelvarde for sensorregistret\n");
+    printf("22. Hitta en sensor via namn\n");
     printf("23. Spara sensorregistret till fil\n");
     printf("24. Las in sensorregistret fran fil\n");
 
@@ -230,6 +232,29 @@ int main(void) {
       }
       case 20:{
         skriv_sensorregister(sensorregister, sensorregister_antal);
+        break;
+      }
+
+      case 21:
+        printf("Medelvarde: %.2f\n",
+        medelvarde_sensorregister(sensorregister, sensorregister_antal));
+        break;
+
+      case 22: {
+        char namn[50];
+
+        printf("Vilket namn vill du soka efter? ");
+        scanf("%49s", namn);
+
+        int index = hitta_sensor(sensorregister, sensorregister_antal, namn);
+
+        if (index == -1) {
+            printf("Hittade ingen sensor med namnet \"%s\".\n", namn);
+        } else {
+            printf("Hittade \"%s\" pa plats %d, varde %.2f\n",
+            namn, index, sensorregister[index].varde);
+        }
+        
         break;
       }
 
