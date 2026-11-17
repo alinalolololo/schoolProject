@@ -29,6 +29,7 @@ static void skriv_meny(void)
     printf("18. Frigor matloggen\n");
 
     //Uppdrag 4
+    printf("19. Lagg till en sensormatning\n");
     printf("20. Skriv ut sensorregistret\n");
     printf("21. Medelvarde for sensorregistret\n");
     printf("22. Hitta en sensor via namn\n");
@@ -230,6 +231,21 @@ int main(void) {
         printf("Matloggen ar frigjord.\n");
         break;
       }
+
+      case 19: {
+          char namn[50];
+          double varde;
+          printf("Namn pa sensorn (utan mellanslag): ");
+          scanf("%49s", namn);
+          printf("Matvarde: ");
+          scanf("%lf", &varde);
+          sensorregister = lagg_till_sensormatning(sensorregister,
+          &sensorregister_antal,
+          namn, varde);
+          printf("Sensorregistret innehaller nu %d post(er).\n",
+          sensorregister_antal);
+          break;
+          }
       case 20:{
         skriv_sensorregister(sensorregister, sensorregister_antal);
         break;
