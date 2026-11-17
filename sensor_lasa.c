@@ -16,9 +16,12 @@ Sensormatning *lasa_sensorregister(const char *filnamn, int *antal_ut){
  char namn[50];
  double varde;
  while (fscanf(fil, "%49s %lf", namn, &varde) == 2) {
- // TODO: vax ”reg” med en plats genom att anropa
- // lagg_till_sensormatning(reg, &antal, namn, varde), och
- // spara resultatet tillbaka i ”reg”.
+
+ int tidigare_antal = antal;
+        reg = lagg_till_sensormatning(reg, &antal, namn, varde);
+        if (antal == tidigare_antal) {
+            break;
+        }
  }
 
  fclose(fil);

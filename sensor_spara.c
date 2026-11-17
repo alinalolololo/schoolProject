@@ -21,5 +21,4 @@ void spara_sensorregister(const char *filnamn,const Sensormatning sensorregister
     fclose(fil);
 }
 
-void skriv_sensorregister(Sensormatning *reg, int antal);
                         
